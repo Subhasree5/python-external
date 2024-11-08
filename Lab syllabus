@@ -1,0 +1,319 @@
+//1
+Fahrenheit=float(input("Enter temperature in Fahrenheit= "))
+celsius=(Fahrenheit-9)*5.0/9.0
+print("Temperature in celsius= ",celsius)
+
+Enter temperature in Fahrenheit= 40
+Temperature in celsius=  17.22222222222222
+//2
+a=int(input("Enter a= "))
+b=int(input("Enter b= "))
+print("Before Swapping: ",a ,b)
+a=a+b
+b=a-b
+a=a-b
+print("After Swappiing: ",a ,b)
+
+Enter a= 5
+Enter b= 6
+Before Swapping:  5 6
+After Swappiing:  6 5
+//3
+dict={"name":"Sree","age":20,"city":"Hyderabad"}
+check="age"
+if check in dict:
+  print(check ,"exists in dictionary")
+else:
+  print(check ,"doesnot exist in dictionary")
+
+age exists in dictionary
+//4
+a=input("Enter alphabet= ")
+vowel='aeiouAEIOU'
+if a in vowel:
+  print(a ,"is a vowel")
+else:
+  print(a ,"is a consonant")  
+Enter alphabet= f
+f is a consonant
+//5
+l=[2,6,-3,0,7,8]
+print("The position of minimum element= ",l.index(min(l)))
+print("The position of maximum element= ",l.index(max(l)))
+
+The position of minimum element=  2
+The position of maximum element=  5
+//6
+def rfact(n):
+  if(n==0):
+    return 1
+  else:
+    return n*rfact(n-1)
+n=int(input("Enter n= "))
+if n<0:
+  print("Factorial is not possible")
+else:
+  print("Factorial is ",rfact(n))
+
+Enter n= 5
+Factorial is  120
+//7
+l=[1,2,3,4,5]
+print("Sum of list= ",sum(l))
+print("Avg of list= ",sum(l)/len(l))
+
+Sum of list=  15
+Avg of list=  3.0
+//8
+l=[]
+n=int(input("Enter no of elements in a list= "))
+for i in range(n):
+    ele=int(input("Enter the element= "))
+    l.append(ele)
+print("List= ",l)
+even=[]
+odd=[]
+for i in l:
+    if(i%2==0):
+        even.append(i)
+    else:
+        odd.append(i)
+print("Even list= ",even)
+print("odd list= ",odd)
+
+Enter no of elements in a list= 4
+Enter the element= 12
+Enter the element= 0
+Enter the element= 35
+Enter the element= 29
+List=  [12, 0, 35, 29]
+Even list=  [12, 0]
+odd list=  [35, 29]
+//9
+def fibonacci(n):
+    if n<=0: return 0
+    elif n==1: return 1
+    else: return fibonacci(n-1)+fibonacci(n-2)
+def print_fibonacci(n):
+    for i in range(n):
+        print(fibonacci(i),end=" ")
+n=10
+print_fibonacci(n)
+
+0  1 1 2 3 5 8 13 21 34 
+//10
+year=int(input("Enter year= "))
+if (year%4==0 and year%100!=0)or (year%400==0):
+    print(year ,"is a leap year")
+else:
+    print(year ,"is not a leap year")
+
+Enter year= 2024
+2024 is a leap year
+//11
+list1=["M","na","i","Abhi"]
+list2=["y","me","s","Ram"]
+result=[]
+for a,b in zip(list1,list2):
+    result.append(a+b)
+print(result)
+
+['My', 'name', 'is', 'AbhiRam']
+//12
+def rgcd(a,b):
+    if b==0:
+        return a
+    else:return rgcd(b,a%b)
+a=int(input("Enter a= "))
+b=int(input("Enter b= "))
+print(rgcd(a,b))
+
+Enter a= 6
+Enter b= 12
+6
+//13
+marks=float(input("Enter marks= "))
+if marks>=90:
+    grade="A"
+elif marks>=80:
+    grade="B"
+elif marks>=70:
+    grade="C"
+elif marks>=60:
+    grade="D"
+elif marks>=50:
+    grade="E"
+else: grade="Failed"
+print(grade)
+
+Enter marks= 69
+D
+//14
+x=int(input("Enter x= "))
+a=int(input("Enter a= "))
+b=int(input("Enter b= "))
+print(x>b and x<a)
+print(x>b or x<a)
+print(not x>b)
+print("Bitwise AND= ",a&b)
+print("Bitwise OR= ",a|b)
+print("Bitwise XOR= ",a^b)
+print("Bitwise NOT= ",~a)
+print("Bitwise left shift= ",a<<1)
+print("Bitwise right shift= ",a>>1)
+
+Enter x= 3
+Enter a= 5
+Enter b= 6
+False
+True
+True
+Bitwise AND=  4
+Bitwise OR=  7
+Bitwise XOR=  3
+Bitwise NOT=  -6
+Bitwise left shift=  10
+Bitwise right shift=  2
+//15
+str=input("Enter string= ")
+rev=" "
+for i in str:
+    rev=i+rev
+print("Reverse of a string= ",rev)    
+
+Enter string= sailu
+Reverse of a string=  ulias 
+//16
+l=[]
+n=int(input("Enter the no of elements= "))
+for i in range(n):
+    ele=int(input("Enter the element= "))
+    l.append(ele)
+print("Before interchanging= ",l)    
+if len(l)>1:
+    l[0],l[n-1]=l[n-1],l[0]
+print("After interchanging= ",l)    
+
+Enter the no of elements= 4
+Enter the element= 1
+Enter the element= 2
+Enter the element= 3
+Enter the element= 4
+Before interchanging=  [1, 2, 3, 4]
+After interchanging=  [4, 2, 3, 1]
+//17
+s="I am raghu"
+words=s.split()
+for i in words:
+    if len(i)%2==0:
+        print(i)
+
+am
+//18
+l=float(input("Enter length of reactangle= "))
+b=float(input("Enter breadth of rectangle= "))
+area=l*b
+perimeter=2*(l+b)
+print("Perimeter of a rectangle= ",perimeter)
+print("Area of a Rectangle= ",area)
+
+Enter length of reactangle= 5
+Enter breadth of rectangle= 2
+Perimeter of a rectangle=  14.0
+Area of a Rectangle=  10.0
+//19
+a=int(input("Enter a= "))
+b=int(input("Enter b= "))
+c=int(input("Enter c= "))
+if a>b and a>c:
+    largest=a
+elif b>a and b>c:
+    largest=b
+else:
+    largest=c
+print("The largest number is= ",largest)    
+
+Enter a= 3
+Enter b= 5
+Enter c= 7
+The largest number is=  7
+//20
+def second(l):
+    l.remove(max(l))
+    return max(l)
+l=[10,5,7,9,2,12]
+print("Second largest element= ",second(l))
+
+Second largest element= 10
+//21
+d=float(input("Enter distance= "))
+t_min=float(input("Enter time= "))
+t_hour=t_min/60
+s=d/t_hour
+print("Speed= ",s)
+
+Enter distance= 10
+Enter time= 300
+Speed=  2.0
+//22
+a=int(input("Enter a= "))
+b=int(input("Enter b= "))
+print("Addition= ",a+b)
+print("Subtraction= ",a-b)
+print("Multiplication= ",a*b)
+print("Division= ",a/b)
+print("Modulus= ",a%b)
+print("Exponentation= ",a**b)
+print("Floor division= ",a//b)
+print("Equals= ",a==b)
+print("Not equal= ",a!=b)
+print("greater than= ",a>b)
+print("Less than= ",a<b)
+print("Greater than or equal to= ",a>=b)
+print("Less  than or equal to= ",a<=b)
+c=a
+print(a is b)
+print(b is not a)
+print(c is a)
+
+Enter a= 10
+Enter b= 5
+Addition=  15
+Subtraction=  5
+Multiplication=  50
+Division=  2.0
+Modulus=  0
+Exponentation=  100000
+Floor division=  2
+Equals=  False
+Not equal=  True
+greater than=  True
+Less than=  False
+Greater than or equal to=  True
+Less  than or equal to=  False
+False
+True
+True
+//23
+a=int(input("Enter a= "))
+b=int(input("Enter b= "))
+c=int(input("Enter c= "))
+if a+b>c and b+c>a and c+a>b:
+    print("Triangle is valid")
+else:
+    print("Triangle is not valid")
+
+Enter a= 3
+Enter b= 4
+Enter c= 5
+Triangle is valid
+//24
+str=input("Enter string= ")
+rev=str[::-1]
+if str==rev:
+    print(str ,"is a palindrome")
+else:
+    print(str ,"is not a palindrome")
+
+Enter string= madam
+madam is a palindrome
